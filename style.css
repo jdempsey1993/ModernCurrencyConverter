@@ -1,0 +1,13 @@
+* {
+    text-align: center;
+    
+}
+
+h1,p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: rgb(220,218,250);
+    background: linear-gradient(90deg, rgba(220,218,250,1) 0%, rgba(85,85,232,1) 35%, rgba(0,212,255,1) 100%);
+}
