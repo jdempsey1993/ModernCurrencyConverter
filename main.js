@@ -10,3 +10,9 @@ fetch('https://currency-converter5.p.rapidapi.com/currency/convert?format=json&f
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+let CURRENCY_ID=""
+
+const currency = {
+    name:"USD"
+}
