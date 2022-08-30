@@ -11,13 +11,23 @@
 </head>
 <body>
     <h1>Currency Converter</h1>
-    <p>Enter initial value:</p>
-    <input type="number"><input type="text">
+    <p>Input amount to convert:</p>
+    <input id="amount" type="text"><br>
+    <label for="currencyOne">Select initial currency.</label>
+    <select name="currencyOne">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="EUR">GBP</option>
+    </select><br>
+    <label for="currencyTwo">Select target currency.</label>
+    <select name="currencyTwo">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="EUR">GBP</option>
+    </select><br>
+    <button type="submit">Click to convert.</button>
 
-    <input type="submit">
-    <p>Converted Output:</p>
-    <p>*Output Converted Here*</p>
-    
+    <p>**Placeholder for output.**</p>
 
 </body>
 </html>
