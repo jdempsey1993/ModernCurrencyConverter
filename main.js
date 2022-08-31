@@ -162,4 +162,4 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
         return symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
 }
 
-console.log(convertCurrency(14,"USD","DKK",1))
+document.getElementById("submit").onclick = convertCurrency()
