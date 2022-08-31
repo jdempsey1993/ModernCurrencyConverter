@@ -8,6 +8,69 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
     secCur = document.getElementById(currencyTwo)
     console.log(intCur)
 
+    switch (exchangeRate){
+        case intCur === "USD" && secCur ==="EUR":
+            exchangeRate=1.0000346
+            break
+            case intCur === "EUR" && secCur ==="USD":
+                exchangeRate=.9999624
+                break
+            case intCur === "USD" && secCur ==="SEK":
+                exchangeRate=10.669387
+                break
+            case intCur === "SEK" && secCur ==="USD":
+                    exchangeRate=.093726093
+                    break
+            case intCur === "EUR" && secCur ==="SEK":
+                        exchangeRate=10.668302
+                        break
+             case intCur === "SEK" && secCur ==="EUR":
+                            exchangeRate=.093737277
+                            break
+            case intCur === "USD" && secCur ==="NOK":
+                                exchangeRate=9.7509159
+                                break
+                    
+             case intCur === "NOK" && secCur ==="USD":
+                                exchangeRate=.10255447 
+                                 break
+             case intCur === "NOK" && secCur ==="SEK":
+                                    exchangeRate=1.0942472
+                                     break
+             case intCur === "NOK" && secCur ==="EUR":
+                                    exchangeRate=.1025696 
+                                     break
+            case intCur === "EUR" && secCur ==="NOK":
+                                        exchangeRate=9.7500646 
+                                         break
+             case intCur === "USD" && secCur ==="DKK":
+                                            exchangeRate=7.4398135
+                                             break
+             case intCur === "DKK" && secCur ==="USD":
+                                                exchangeRate=.13441197
+                                                 break
+              case intCur === "DKK" && secCur ==="EUR":
+                                                    exchangeRate=.13444977 
+                                                 break
+            case intCur === "EUR" && secCur ==="DKK":
+                                              exchangeRate=7.43772
+                                                 break
+            case intCur === "DKK" && secCur ==="SEK":
+                                                    exchangeRate=1.4344208 
+                                                       break
+            case intCur === "SEK" && secCur ==="DKK":
+                                                        exchangeRate=0.697146
+                                                           break
+            case intCur === "DKK" && secCur ==="NOK":
+                                                         exchangeRate=1.3110709
+                                                        break
+            case intCur === "NOK" && secCur ==="DKK":
+                                                            exchangeRate=0.762735
+                                                               break
+                
+            
+    }
+  
     /*
     Currency Rates
     1 USD = 1.0000346 EUR
@@ -27,11 +90,14 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
     1 EUR = 7.43772 DKK
     1 DKK  = 1.4344208 SEK
     1 SEK = 0.697146 DKK
+
     1 DKK = 1.3110709 NOK
     1 NOK = 0.762735 DKK
 
 
     */
+
+
 
     let symbolLeft=""
     let symbolRight=""
