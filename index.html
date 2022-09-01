@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modern Currency Converter</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script defer src="main.js"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <h1>Currency Converter</h1>
     <p>Input amount to convert:</p>
 
-    <form onsubmit="convertCurrency()">
-    <input id="amount" type="number" required><br>
-    <label for="currencyOne">Select initial currency.</label>
-    <select id="currencyOne" name="currencyOne">
+    <form onsubmit="return convertCurrency(event, amount, currencyOne, currencyTwo, output)">
+      <input id="amount" type="number" required /><br />
+      <label for="currencyOne">Select initial currency.</label>
+      <select id="currencyOne" name="currencyOne">
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>
         <option value="SEK">SEK</option>
         <option value="NOK">NOK</option>
-        <option value="DKK">DKK</option>
-    </select><br>
-    <label for="currencyTwo">Select target currency.</label>
-    <select id="currencyTwo"name="currencyTwo">
+        <option value="DKK">DKK</option></select
+      ><br />
+      <label for="currencyTwo">Select target currency.</label>
+      <select id="currencyTwo" name="currencyTwo">
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="GBP">GBP</option>
         <option value="SEK">SEK</option>
         <option value="NOK">NOK</option>
-        <option value="DKK">DKK</option>
-    </select><br>
-    <button id="submit"type="submit">Click to convert.</button>
+        <option value="DKK">DKK</option></select
+      ><br />
+      <button id="submit" type="submit">Click to convert.</button>
 
-    <p id="output"></p>
-</form>
-</body>
+      <p id="output"></p>
+    </form>
+  </body>
 </html>
