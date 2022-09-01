@@ -1,103 +1,103 @@
 function convertCurrency (intVal,intCur,secCur,exchangeRate){
-    intVal = document.getElementById(amount)
-    
-    intCur = document.getElementById(currencyOne)
-    
-    secCur = document.getElementById(currencyTwo)
-
+    intVal = document.getElementById("amount").value
+    console.log(intVal)
+    intCur = document.getElementById("currencyOne").value
+    console.log(intCur)
+    secCur = document.getElementById("currencyTwo").value
+    console.log(secCur)
     switch (exchangeRate){
-        case intCur === "USD":
-        case secCur ==="EUR":
+        case intCur =="USD":
+        case secCur =="EUR":
             exchangeRate=1.0000346
             break
 
-        case intCur === "EUR": 
-        case secCur ==="USD":
+        case intCur =="EUR": 
+        case secCur =="USD":
             exchangeRate=.9999624
             break
 
-        case intCur === "USD":
-        case secCur ==="SEK":
+        case intCur =="USD":
+        case secCur =="SEK":
             exchangeRate=10.669387
             break
 
-        case intCur === "SEK":
-        case secCur ==="USD":
+        case intCur =="SEK":
+        case secCur =="USD":
             exchangeRate=.093726093
             break
 
-        case intCur === "EUR":
-        case secCur ==="SEK":
+        case intCur =="EUR":
+        case secCur =="SEK":
             exchangeRate=10.668302
              break
 
-        case intCur === "SEK" :
-        case secCur ==="EUR":
+        case intCur =="SEK":
+        case secCur =="EUR":
              exchangeRate=.093737277
             break
 
-        case intCur === "USD":
-        case secCur ==="NOK":
+        case intCur =="USD":
+        case secCur =="NOK":
              exchangeRate=9.7509159
             break
                     
-        case intCur === "NOK":
-        case secCur ==="USD":
+        case intCur =="NOK":
+        case secCur =="USD":
             exchangeRate=.10255447 
             break
 
-        case intCur === "NOK":
-        case secCur ==="SEK":
+        case intCur =="NOK":
+        case secCur =="SEK":
              exchangeRate=1.0942472
              break
 
-        case intCur === "NOK":
-        case secCur ==="EUR":
+        case intCur =="NOK":
+        case secCur =="EUR":
             exchangeRate=.1025696 
              break
 
-        case intCur === "EUR":
-        case secCur ==="NOK":
+        case intCur =="EUR":
+        case secCur =="NOK":
             exchangeRate=9.7500646 
              break
 
-        case intCur === "USD":
-        case secCur ==="DKK":
+        case intCur =="USD":
+        case secCur =="DKK":
             exchangeRate=7.4398135
             break
 
-        case intCur === "DKK":
+        case intCur ==="DKK":
         case secCur ==="USD":
             exchangeRate=.13441197
              break
 
-        case intCur === "DKK":
+        case intCur ==="DKK":
         case secCur ==="EUR":
             exchangeRate=.13444977 
             break
 
-        case intCur === "EUR":
-        case secCur ==="DKK":
+        case intCur =="EUR":
+        case secCur =="DKK":
              exchangeRate=7.43772
              break
 
-        case intCur === "DKK":
-        case secCur ==="SEK":
+        case intCur=="DKK":
+        case secCur=="SEK":
              exchangeRate=1.4344208 
              break
 
-        case intCur === "SEK":
-        case secCur ==="DKK":
+        case intCur =="SEK":
+        case secCur =="DKK":
             exchangeRate=0.697146
              break
 
-        case intCur === "DKK":
-        case secCur ==="NOK":
+        case intCur =="DKK":
+        case secCur =="NOK":
             exchangeRate=1.3110709
             break
 
-        case intCur === "NOK": 
-        case secCur ==="DKK":
+        case intCur == "NOK": 
+        case secCur == "DKK":
              exchangeRate=0.762735
             break    
             
@@ -157,8 +157,10 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
         }
 
         return symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
+        
 }
 
 const submit = document.getElementById("submit")
 submit.addEventListener("click",convertCurrency)
-console.log(convertCurrency("Clicked"))
+submit.onclick=convertCurrency()
+console.log(convertCurrency())
