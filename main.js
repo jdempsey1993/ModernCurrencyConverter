@@ -142,5 +142,5 @@ function convertCurrency(event, amountInout, currencyFromEle, currencyToEle, out
 
   outputEle.innerText =
     symbolLeft +
-    ((amountInout.value * exchangeRate).toString().replace(".", delimiter) + symbolRight);
+    ((amountInout.value * exchangeRate).toFixed(2).toString().replace(".", delimiter) + symbolRight);
 }
