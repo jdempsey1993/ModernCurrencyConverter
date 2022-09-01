@@ -162,4 +162,6 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
         return symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
 }
 
-document.getElementById("submit").onclick = convertCurrency()
+let submit = document.querySelector("submit")
+submit.addEventListener("click",convertCurrency)
+console.log(convertCurrency("Clicked"))
