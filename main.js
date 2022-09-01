@@ -1,12 +1,9 @@
 function convertCurrency (intVal,intCur,secCur,exchangeRate){
     intVal = document.getElementById(amount)
-    console.log(intVal)
     
     intCur = document.getElementById(currencyOne)
-    console.log(intCur)
     
     secCur = document.getElementById(currencyTwo)
-    console.log(intCur)
 
     switch (exchangeRate){
         case intCur === "USD":
@@ -162,6 +159,6 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
         return symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
 }
 
-let submit = document.querySelector("submit")
+const submit = document.getElementById("submit")
 submit.addEventListener("click",convertCurrency)
 console.log(convertCurrency("Clicked"))
