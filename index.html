@@ -13,8 +13,8 @@
     <h1>Currency Converter</h1>
     <p>Input amount to convert:</p>
 
-    <form>
-    <input id="amount" type="number" min=.001 required><br>
+    <form onsubmit="convertCurrency">
+    <input id="amount" type="number" min=".001" required><br>
     <label for="currencyOne">Select initial currency.</label>
     <select id="currencyOne" name="currencyOne">
         <option value="USD">USD</option>
