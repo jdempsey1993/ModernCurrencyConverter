@@ -13,8 +13,8 @@
     <h1>Currency Converter</h1>
     <p>Input amount to convert:</p>
 
-    <form onsubmit="convertCurrency">
-    <input id="amount" type="number" min=".001" required><br>
+    <form onsubmit="convertCurrency()">
+    <input id="amount" type="number" required><br>
     <label for="currencyOne">Select initial currency.</label>
     <select id="currencyOne" name="currencyOne">
         <option value="USD">USD</option>
@@ -34,6 +34,8 @@
         <option value="DKK">DKK</option>
     </select><br>
     <button id="submit"type="submit">Click to convert.</button>
+
+    <p id="output"></p>
 </form>
 </body>
 </html>

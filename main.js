@@ -3,7 +3,7 @@ function convertCurrency (event){
     const intVal = document.getElementById("amount").value
     const intCur = document.getElementById("currencyOne").value
     const secCur = document.getElementById("currencyTwo").value
-    
+
     let exchangeRate = 0
     const convertCode = intCur + secCur
     switch (convertCode){
@@ -146,7 +146,11 @@ function convertCurrency (event){
                 
         }
 
-        return symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
+        const outputElement = document.getElementById("output")
+
+        outputElement.innerText = symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
+
+        console.log(outputElement, intVal, exchangeRate, "Here is a string." )
         
 }
 
