@@ -1,55 +1,53 @@
-function convertCurrency (event){
-    event.preventDefault()
-    const intVal = document.getElementById("amount").value
-    const intCur = document.getElementById("currencyOne").value
-    const secCur = document.getElementById("currencyTwo").value
+function convertCurrency(event, amountInout, currencyFromEle, currencyToEle, outputEle) {
+  event.preventDefault();
 
-    let exchangeRate = 0
-    const convertCode = intCur + secCur
-    switch (convertCode){
-        case "USDEUR":
-            exchangeRate=1.0000346
-            break
+  let exchangeRate = 0;
+  const convertCode = currencyFromEle.value + currencyToEle.value;
 
-        case "EURUSD":
-            exchangeRate=.9999624
-            break
+  switch (convertCode) {
+    case "USDEUR":
+      exchangeRate = 1.0000346;
+      break;
 
-        case "USDSEK":
-            exchangeRate=10.669387
-            break
+    case "EURUSD":
+      exchangeRate = 0.9999624;
+      break;
 
-        case "SEKUSD":
-            exchangeRate=.093726093
-            break
+    case "USDSEK":
+      exchangeRate = 10.669387;
+      break;
 
-        case "EURSEK":
-            exchangeRate=10.668302
-             break
+    case "SEKUSD":
+      exchangeRate = 0.093726093;
+      break;
 
-        case "SEKEUR":
-             exchangeRate=.093737277
-            break
+    case "EURSEK":
+      exchangeRate = 10.668302;
+      break;
 
-        // case intCur ==="USD" && secCur ==="NOK":
-        //      exchangeRate=9.7509159
-        //     break
-                    
-        // case intCur ==="NOK" && secCur ==="USD":
-        //     exchangeRate=.10255447 
-        //     break
+    case "SEKEUR":
+      exchangeRate = 0.093737277;
+      break;
 
-        // case intCur ==="NOK"&& secCur ==="SEK":
-        //      exchangeRate=1.0942472
-        //      break
+    // case intCur ==="USD" && secCur ==="NOK":
+    //      exchangeRate=9.7509159
+    //     break
 
-        // case intCur ==="NOK" && secCur ==="EUR":
-        //     exchangeRate=.1025696 
-        //      break
+    // case intCur ==="NOK" && secCur ==="USD":
+    //     exchangeRate=.10255447
+    //     break
 
-        // case intCur ==="EUR "&& secCur ==="NOK":
-        //     exchangeRate=9.7500646 
-        //      break
+    // case intCur ==="NOK"&& secCur ==="SEK":
+    //      exchangeRate=1.0942472
+    //      break
+
+    // case intCur ==="NOK" && secCur ==="EUR":
+    //     exchangeRate=.1025696
+    //      break
+
+    // case intCur ==="EUR "&& secCur ==="NOK":
+    //     exchangeRate=9.7500646
+    //      break
 
     //     case intCur =="USD":
     //     case secCur =="DKK":
@@ -63,7 +61,7 @@ function convertCurrency (event){
 
     //     case intCur ==="DKK":
     //     case secCur ==="EUR":
-    //         exchangeRate=.13444977 
+    //         exchangeRate=.13444977
     //         break
 
     //     case intCur =="EUR":
@@ -73,7 +71,7 @@ function convertCurrency (event){
 
     //     case intCur=="DKK":
     //     case secCur=="SEK":
-    //          exchangeRate=1.4344208 
+    //          exchangeRate=1.4344208
     //          break
 
     //     case intCur =="SEK":
@@ -86,14 +84,13 @@ function convertCurrency (event){
     //         exchangeRate=1.3110709
     //         break
 
-    //     case intCur == "NOK": 
+    //     case intCur == "NOK":
     //     case secCur == "DKK":
     //          exchangeRate=0.762735
-    //         break    
-            
-    }
-  
-    /*
+    //         break
+  }
+
+  /*
     Currency Rates
     1 USD = 1.0000346 EUR
     1 EUR = 0.9999624 USD
@@ -119,41 +116,31 @@ function convertCurrency (event){
 
     */
 
+  let symbolLeft = "";
+  let symbolRight = "";
+  let delimiter = ".";
+  switch (currencyToEle.value) {
+    case "USD":
+      symbolLeft = "$";
+      break;
+    case "EUR":
+      symbolLeft = "€";
+      break;
+    case "GBP":
+      symbolLeft = "£";
+      break;
+    case "SEK":
+      symbolRight = "kr";
+      break;
+    case "NOK":
+      symbolRight = "kr";
+      break;
+    case "DKK":
+      symbolRight = "kr";
+      break;
+  }
 
-
-    let symbolLeft=""
-    let symbolRight=""
-    let delimiter="."  
-        switch(secCur){
-            case "USD":
-                symbolLeft="$"
-                break
-            case "EUR":
-                symbolLeft="€"
-                break
-            case "GBP":
-                symbolLeft="£"
-                break
-            case "SEK":
-                symbolRight="kr"
-                break
-            case "NOK":
-                symbolRight="kr"
-                break
-            case "DKK":
-                symbolRight="kr"
-                break
-                
-        }
-
-        const outputElement = document.getElementById("output")
-
-        outputElement.innerText = symbolLeft + ((intVal*exchangeRate).toString().replace(".",delimiter)+symbolRight)
-
-        console.log(outputElement, intVal, exchangeRate, "Here is a string." )
-        
+  outputEle.innerText =
+    symbolLeft +
+    ((amountInout.value * exchangeRate).toString().replace(".", delimiter) + symbolRight);
 }
-
-// const submit = document.getElementById("submit")
-// submit.addEventListener("click",convertCurrency)
-// console.log(convertCurrency())
