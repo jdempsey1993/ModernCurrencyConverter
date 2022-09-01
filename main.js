@@ -162,5 +162,4 @@ function convertCurrency (intVal,intCur,secCur,exchangeRate){
 
 const submit = document.getElementById("submit")
 submit.addEventListener("click",convertCurrency)
-submit.onclick=convertCurrency()
 console.log(convertCurrency())
