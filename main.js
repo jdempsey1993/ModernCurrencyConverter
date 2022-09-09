@@ -29,65 +29,57 @@ function convertCurrency(event, amountInout, currencyFromEle, currencyToEle, out
       exchangeRate = 0.093737277;
       break;
 
-    // case intCur ==="USD" && secCur ==="NOK":
-    //      exchangeRate=9.7509159
-    //     break
+    case "USDNOK":
+         exchangeRate=9.7509159
+        break
 
-    // case intCur ==="NOK" && secCur ==="USD":
-    //     exchangeRate=.10255447
-    //     break
+    case "NOKUSD":
+        exchangeRate=.10255447
+        break
 
-    // case intCur ==="NOK"&& secCur ==="SEK":
-    //      exchangeRate=1.0942472
-    //      break
+    case "NOKSEK":
+         exchangeRate=1.0942472
+         break
 
-    // case intCur ==="NOK" && secCur ==="EUR":
-    //     exchangeRate=.1025696
-    //      break
+    case "NOKEUR":
+        exchangeRate=.1025696
+         break
 
-    // case intCur ==="EUR "&& secCur ==="NOK":
-    //     exchangeRate=9.7500646
-    //      break
+    case "EURNOK":
+        exchangeRate=9.7500646
+         break
 
-    //     case intCur =="USD":
-    //     case secCur =="DKK":
-    //         exchangeRate=7.4398135
-    //         break
+    case "USDDKK":
+            exchangeRate=7.4398135
+            break
 
-    //     case intCur ==="DKK":
-    //     case secCur ==="USD":
-    //         exchangeRate=.13441197
-    //          break
+    case "DKKUSD":
+            exchangeRate=.13441197
+             break
 
-    //     case intCur ==="DKK":
-    //     case secCur ==="EUR":
-    //         exchangeRate=.13444977
-    //         break
+    case "DKKEUR":
+            exchangeRate=.13444977
+            break
 
-    //     case intCur =="EUR":
-    //     case secCur =="DKK":
-    //          exchangeRate=7.43772
-    //          break
+    case "EURDKK":
+             exchangeRate=7.43772
+             break
 
-    //     case intCur=="DKK":
-    //     case secCur=="SEK":
-    //          exchangeRate=1.4344208
-    //          break
+    case "DKKSEK":
+             exchangeRate=1.4344208
+             break
 
-    //     case intCur =="SEK":
-    //     case secCur =="DKK":
-    //         exchangeRate=0.697146
-    //          break
+    case "SEKDKK":
+            exchangeRate=0.697146
+             break
 
-    //     case intCur =="DKK":
-    //     case secCur =="NOK":
-    //         exchangeRate=1.3110709
-    //         break
+    case "DKKNOK":
+            exchangeRate=1.3110709
+            break
 
-    //     case intCur == "NOK":
-    //     case secCur == "DKK":
-    //          exchangeRate=0.762735
-    //         break
+    case "NOKDKK":
+             exchangeRate=0.762735
+            break
   }
 
   /*
